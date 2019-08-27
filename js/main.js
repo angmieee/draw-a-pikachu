@@ -8,7 +8,7 @@
         let n = 0
         setTimeout(function run() {
             n += 1
-            container.innerHTML = code.substring(0, n)
+            container.innerHTML = Prism.highlight(prefix + code.substring(0, n), Prism.languages.css)
             styleTag.innerHTML = code.substring(0, n)
             container.scrollTop = container.scrollHeight
             if (n < code.length) {
